@@ -1,6 +1,7 @@
 #include <iostream>
 #include <queue>
 #include <algorithm>
+#include <memory.h>
 using namespace std;
 
 const int MAX = 50;
@@ -15,7 +16,7 @@ int cache[MAX][MAX];
 queue<pair<int, int>> table;
 
 int bfs(int y, int x) {
-	int answer = INT_MIN;
+	int answer = -1;
 
 	table.push(make_pair(y, x));
 	cache[y][x] = 1;
@@ -27,7 +28,7 @@ int bfs(int y, int x) {
 		table.pop();
 		for (int i = 0; i < 4; i++) {
 			int nextY = nowY + dy[i];
-			int nextX = x + dx[i];
+			int nextX = nowX + dx[i];
 
 			if (nextY < 0 || nextX < 0 || nextY >= column || nextX >= row || map[nextY][nextX] != 'L')
 				continue;
@@ -44,7 +45,7 @@ int bfs(int y, int x) {
 }
 
 int solution() {
-	int answer = INT_MIN;
+	int answer = -1;
 
 	for (int i = 0; i < column; i++)
 		for (int j = 0; j < row; j++)
