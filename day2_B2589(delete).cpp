@@ -1,16 +1,3 @@
-emotional coding
-6021
-
-파일명이랑 똑같은 클래스만 public을 가질 수 있다.
-
-람다는 인터페이스만
-
-
-프라이빗 인스턴스 만들고
-생성자 막아놓고
-인스턴스 받아갈 수 있는 함수 생성
-
-
 #include <iostream>
 #include <vector>
 #include <algorithm>
