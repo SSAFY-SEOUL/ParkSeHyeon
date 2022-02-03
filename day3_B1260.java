@@ -5,7 +5,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
-public class B38440711 {
+public class B1260 {
 	static int N, M, V;
 	static boolean[][] G;
 	static boolean[] cache;
