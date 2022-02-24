@@ -23,12 +23,10 @@ public class B14719 {
 		for (int i = 1; i < W - 1; i++) {
 			int left = 0, right = 0;
 			
-			left = Math.max(data[i - 1], leftMax);
+			leftMax = left = Math.max(data[i - 1], leftMax);
 			for (int j = i + 1; j < W; j++) 
 				right = Math.max(right, data[j]);
 			answer += Math.max(Math.min(left, right) - data[i], 0);
-			
-			leftMax = Math.max(left, leftMax);
 		}
 	}
 	
